@@ -111,6 +111,7 @@ We default to the date filter, and this renders the same output as Case #2.
 
 I chose REST APIs for this project because
 
+- It is stateless, meaning that each API request is independent of one another. This is suitable for my project, because I call a search API every time a user searches a keyword, and I want each user search request to operate within its own realm.
 - 
 
 ### 2.) MongoDB over SQL
