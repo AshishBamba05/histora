@@ -78,7 +78,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 
 **Case #1: The user lands on page and hasn't searched anything (yet).**
 
-All events are pre-loaded because we call an API (/api/events) to diplay **ALL** events. When the frontend React component calls `fetch('/api/events')` in [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx), that sends a `GET` request routed through Express server in [`server/server.js`](https://github.com/AshishBamba05/histora/blob/main/server/server.js), and returns a MongoDB query in JSON format.
+All events are pre-loaded because we call an API (/api/events) to display **ALL** events. When the frontend React component calls `fetch('/api/events')` in [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx), that sends a `GET` request routed through Express server in [`server/server.js`](https://github.com/AshishBamba05/histora/blob/main/server/server.js), and returns a MongoDB query in JSON format.
 
 
 **Case #2: The user types in a valid date but leaves the keyword section blank.**
@@ -92,6 +92,10 @@ The frontend React component parses through all the events pre-loaded from the i
 **Case #3: The user leaves the date filter empty but instead types in a valid keyword.**
 
 Since the date field is empty, the date matching branch is skipped and we look at keyword filter. On the React frontend component via [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx), we call `fetch('/api/search?q=...')`, which sends a `GET` request to the `/api/search` endpoint in [`server/server.js`](https://github.com/AshishBamba05/histora/blob/main/server/server.js).  The backend server retrieves this request, reads the given word filter, and runs a text match against MongoDB event database. It then returns all relevant findings.
+
+If the Express server is unable to find an exact text match against the MongoDB database, then we resort to a dynamic programming algorithm to find the closest keyword match against the given filter, and return a suggestion on the React frontend. 
+
+However, if the dynamic programming algorithm is unable to find any close match, then the React frontend just returns a message saying `No Data Found.`
 
 
 **Case #4: The user fills in both filters.**
