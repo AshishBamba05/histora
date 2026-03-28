@@ -104,6 +104,13 @@ We default to the date filter, and this renders the same output as Case #2.
 
 **Case #5: The user types nothing and hits search.**
 
+
+## Software Engineering Design Decisions
+
+### 1.) Choosing REST APIs
+
+### 2.) MongoDB over SQL
+
 ## 🖥️ Black-Box Testing
 
 | Home Page | Search Result (Search Bar) |
