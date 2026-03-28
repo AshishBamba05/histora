@@ -91,7 +91,7 @@ The frontend React component parses through all the events pre-loaded from the i
 
 **Case #3: The user leaves the date filter empty but instead types in a valid keyword.**
 
-Since the date field is empty, the date matching branch is skipped and we look at keyword filter. On the React frontend, we call `fetch('/api/search?q=...')`, which sends a `GET` request to the `/api/search` endpoint in [`server/server.js`](https://github.com/AshishBamba05/histora/blob/main/server/server.js).  The backend server retrieves this request, reads the given word filter, and runs a text match against MongoDB event database. It then returns all relevant findings.
+Since the date field is empty, the date matching branch is skipped and we look at keyword filter. On the React frontend component via [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx), we call `fetch('/api/search?q=...')`, which sends a `GET` request to the `/api/search` endpoint in [`server/server.js`](https://github.com/AshishBamba05/histora/blob/main/server/server.js).  The backend server retrieves this request, reads the given word filter, and runs a text match against MongoDB event database. It then returns all relevant findings.
 
 
 **Case #4: The user fills in both filters.**
