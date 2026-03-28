@@ -93,7 +93,7 @@ The frontend React component parses through all the events pre-loaded from the i
 
 Since the date field is empty, the date matching branch is skipped and we look at keyword filter. On the React frontend component via [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx), we call `fetch('/api/search?q=...')`, where `q` is the user-inputted keyword filter. This sends a `GET` request to the `/api/search` endpoint in [`server/server.js`](https://github.com/AshishBamba05/histora/blob/main/server/server.js).  The backend server retrieves this request, reads the given word filter, and runs a text match against MongoDB event database. It then returns all relevant findings.
 
-If the Express server is unable to find an exact text match against the MongoDB database, then we resort to a dynamic programming algorithm to find the closest keyword match against the given filter, and return a suggestion on the React frontend. 
+If the Express server is unable to find an exact text match against the MongoDB database, then we resort to a dynamic programming algorithm to find the closest keyword match against the given filter, and return a `Did you mean?` suggestion on the React frontend. 
 
 However, if the dynamic programming algorithm is unable to find any close match, then the React frontend just returns a message saying `No Data Found.`
 
@@ -109,7 +109,13 @@ We default to the date filter, and this renders the same output as Case #2.
 
 ### 1.) Choosing REST APIs
 
+I chose REST APIs for this project because
+
+- 
+
 ### 2.) MongoDB over SQL
+
+### 3.) 
 
 ## 🖥️ Black-Box Testing
 
