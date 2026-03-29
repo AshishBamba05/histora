@@ -134,6 +134,10 @@ First, we run `rebuildLexicon()`, which pulls all distinct keywords and titles f
 
 As we're iterating through the list, our program keeps track of the match with the smallest distance; If that distance is within the allowed threshold, it returns that word as the suggestion; else, our React component returns `No Data Found.`
 
+### 4.) Deployment On Render
+
+
+
 ## 🖥️ Black-Box Testing
 
 | Home Page | Search Result (Search Bar) |
