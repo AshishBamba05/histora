@@ -129,6 +129,8 @@ If our Express server can't find an exact match with our keyword filter against 
 
 First, we run `rebuildLexicon()`, which pulls all distinct keywords and titles for every event in MongoDB. We insert all terms into a `Set` data structure to deduplicate this list, then we compute the minimum # of single-character edits needed to turn the input into the candidate word, per every keyword in the list. 
 
+As we're iterating through the list, our program keeps track of the match with the smallest distance; If that distance is within the allowed threshold, it returns that word as the suggestion; else, our React component returns `No Data Found.`
+
 ## 🖥️ Black-Box Testing
 
 | Home Page | Search Result (Search Bar) |
