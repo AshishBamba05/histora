@@ -151,7 +151,7 @@ As we're iterating through the list, our program keeps track of the match with t
 
 ### 1) Clone + install
 
-To clone:
+First, please clone the repository:
 
 #### HTTPS (recommended)
 ```bash
