@@ -92,7 +92,7 @@ The frontend React component parses through all the events pre-loaded from the i
 
 **Case #3: The user leaves the date filter empty but instead types in a valid keyword.**
 
-Since the date field is empty, the date matching branch is skipped and we look at keyword filter in the the React frontend component via [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx). 
+Since the date field is empty, the date matching branch is skipped and we look at keyword filter in the React frontend component at [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx). 
 
 (As an **edge case**, if the keyword filter is also empty, then the React component [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx) just returns *No Data Found*; No API call goes though.)
 
