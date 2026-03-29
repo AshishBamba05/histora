@@ -127,7 +127,7 @@ I create a MongoDB schema in [`server/build-events.mjs`](https://github.com/Ashi
 
 If our Express server can't find an exact match with our keyword filter against our NoSQL database, then we take a dynamic programming algorithmic approach to try to see if our input keyword is a mistyped version of a keyword in our NoSQL database. 
 
-First, we 
+First, we run `rebuildLexicon()`, which pulls all distinct keywords and titles for every event in MongoDB. We insert all terms into a Set data structure to deduplicate this list, then we compute the minimum # of single-character edits needed to turn the input into the candidate word, per every keyword in the list. 
 
 ## 🖥️ Black-Box Testing
 
