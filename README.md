@@ -94,7 +94,7 @@ The frontend React component parses through all the events pre-loaded from the i
 
 Since the date field is empty, the date matching branch is skipped and we look at keyword filter. 
 
-As an **edge case**, if the keyword filter is also empty, then the React component just returns *No Data Found.*
+(As an **edge case**, if the keyword filter is also empty, then the React component [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx) just returns *No Data Found.*)
 
 
 On the React frontend component via [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx), we call `fetch('/api/search?q=...')`, where `q` is the user-inputted keyword filter. This sends a `GET` request to the `/api/search` endpoint in [`server/server.js`](https://github.com/AshishBamba05/histora/blob/main/server/server.js).  The backend server retrieves this request, reads the given word filter, and runs a text match against MongoDB event database. It then returns all relevant findings.
@@ -110,8 +110,6 @@ However, if the dynamic programming algorithm is unable to find any close match,
 We default to the date filter, and this renders the same output as Case #2.
 
 ---
-
-**Case #5: The user types nothing and hits search.**
 
 
 ## Software Engineering Design Decisions
