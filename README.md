@@ -154,14 +154,14 @@ As we're iterating through the list, our program keeps track of the match with t
 First, please clone the repository:
 
 - #### HTTPS (recommended)
-      ```bash
+  ```bash
       git clone https://github.com/AshishBamba05/histora.git
-      ```
+   ```
 
 - #### SSH (if you have SSH keys set up)
-      ```bash
+  ```bash
       git clone git@github.com:AshishBamba05/histora.git
-      ```
+  ```
 
 Moving forward after cloning, run the following commands:
 
