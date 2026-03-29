@@ -186,6 +186,7 @@ npm start
 npm run dev
 ```
 
+A link should popup. Upon clicking, the Histora app should be live!
 
 ---
 
