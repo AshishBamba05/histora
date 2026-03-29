@@ -186,7 +186,7 @@ npm start
 npm run dev
 ```
 
-A link should popup. Upon clicking, the Histora app should be live!
+A link should popup specific to your `localhost` and `port #` (i.e. `http://localhost:3000`). Upon clicking, the Histora app should be live!
 
 ---
 
