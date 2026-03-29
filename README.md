@@ -153,10 +153,10 @@ As we're iterating through the list, our program keeps track of the match with t
 
 First, please clone the repository:
 
-#### HTTPS (recommended)
-```bash
-git clone https://github.com/AshishBamba05/histora.git
-```
+- #### HTTPS (recommended)
+      ```bash
+      git clone https://github.com/AshishBamba05/histora.git
+      ```
 
 #### SSH (if you have SSH keys set up)
 ```bash
