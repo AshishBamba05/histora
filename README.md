@@ -151,6 +151,8 @@ As we're iterating through the list, our program keeps track of the match with t
 
 ### 1) Clone + install
 
+To clone:
+
 #### HTTPS (recommended)
 ```bash
 git clone https://github.com/AshishBamba05/histora.git
@@ -161,8 +163,9 @@ git clone https://github.com/AshishBamba05/histora.git
 git clone git@github.com:AshishBamba05/histora.git
 ```
 
+Moving forward after cloning, run the following commands:
+
 ```bash
-git clone https://github.com/AshishBamba05/histora.git
 cd histora
 npm install
 ```
