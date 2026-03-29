@@ -151,6 +151,16 @@ As we're iterating through the list, our program keeps track of the match with t
 
 ### 1) Clone + install
 
+#### HTTPS (recommended)
+```bash
+git clone https://github.com/AshishBamba05/histora.git
+```
+
+#### SSH (if you have SSH keys set up)
+```bash
+git clone git@github.com:AshishBamba05/histora.git
+```
+
 ```bash
 git clone https://github.com/AshishBamba05/histora.git
 cd histora
