@@ -155,12 +155,12 @@ First, please clone the repository:
 
 - #### HTTPS (recommended)
   ```bash
-      git clone https://github.com/AshishBamba05/histora.git
+  git clone https://github.com/AshishBamba05/histora.git
    ```
 
 - #### SSH (if you have SSH keys set up)
   ```bash
-      git clone git@github.com:AshishBamba05/histora.git
+  git clone git@github.com:AshishBamba05/histora.git
   ```
 
 Moving forward after cloning, run the following commands:
