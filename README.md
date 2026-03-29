@@ -123,7 +123,11 @@ I chose REST APIs for this project because:
 
 I create a MongoDB schema in [`server/build-events.mjs`](https://github.com/AshishBamba05/histora/blob/main/server/build-events.mjs) 
 
-### 3.) 
+### 3.) Fuzzy Matching Dynamic Programming Algorithm
+
+If our Express server can't find an exact match with our keyword filter against our NoSQL database, then we take a dynamic programming algorithmic approach to try to see if our input keyword is a mistyped version of a keyword in our NoSQL database. 
+
+First, we 
 
 ## 🖥️ Black-Box Testing
 
