@@ -116,6 +116,20 @@ We default to the date filter, and this renders the same output as Case #2.
 
 ### 1.) Deciding React States
 
+On the frontend, we activate 8 states:
+
+```bash
+  const [dateInput, setDateInput] = useState('');
+  const [keywordInput, setKeywordInput] = useState('');
+  const [narratives, setNarratives] = useState([]);
+  const [hasSearched, setHasSearched] = useState(false);
+  const [suggestion, setSuggestion] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const [allEvents, setAllEvents] = useState([]);
+  const [bootError, setBootError] = useState(null);
+```
+
 ### 2.) Choosing REST APIs
 
 I chose REST APIs for this project because:
