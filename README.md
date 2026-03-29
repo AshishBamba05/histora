@@ -114,7 +114,9 @@ We default to the date filter, and this renders the same output as Case #2.
 
 ## Software Engineering Design Decisions
 
-### 1.) Choosing REST APIs
+### 1.) Deciding React States
+
+### 2.) Choosing REST APIs
 
 I chose REST APIs for this project because:
 
@@ -122,11 +124,11 @@ I chose REST APIs for this project because:
   
 - It is resource-driven as opposed to being action-driven, which fits because the app just call API endpoints when it needs to read data and deliver it to React frontend for display. This doesn't require a complex function, so REST API principles fit well here.
 
-### 2.) MongoDB over SQL
+### 3.) MongoDB over SQL
 
 I create a MongoDB schema in [`server/build-events.mjs`](https://github.com/AshishBamba05/histora/blob/main/server/build-events.mjs) 
 
-### 3.) Fuzzy Matching Dynamic Programming Algorithm
+### 4.) Fuzzy Matching Dynamic Programming Algorithm
 
 If our Express server can't find an exact match with our keyword filter against our NoSQL database, then we take a dynamic programming algorithmic approach to try to see if our input keyword is a mistyped version of a keyword in our NoSQL database. 
 
@@ -134,7 +136,7 @@ First, we run `rebuildLexicon()`, which pulls all distinct keywords and titles f
 
 As we're iterating through the list, our program keeps track of the match with the smallest distance; If that distance is within the allowed threshold, it returns that word as the suggestion; else, our React component returns `No Data Found.`
 
-### 4.) Deployment On Render
+### 5.) Deployment On Render
 
 
 
