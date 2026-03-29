@@ -165,17 +165,17 @@ First, please clone the repository:
 
 Moving forward after cloning, run the following commands:
 
-```bash
-cd histora
-npm install
-```
+   ```bash
+   cd histora
+   npm install
+   ```
 
 ### 2) Environment variables (create in server/)
 Create a `.env` file in the project root:
-```
-MONGODB_URI="your_mongodb_connection_string"
-PORT = <Enter Port Number>
-```
+   ```
+   MONGODB_URI="your_mongodb_connection_string"
+   PORT = <Enter Port Number>
+   ```
 
 #### To get your MongoDB connection string:
 1. Go to [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas) and sign up or log in
@@ -195,14 +195,14 @@ Ensure `.env` is listed in your `.gitignore`.
 Open `Split Terminal` then run the following commands:
 
 #### Activate backend (Terminal 1)
-```
-npm start
-```
+   ```
+   npm start
+   ```
 
 #### Activate frontend (Terminal 2)
-```
-npm run dev
-```
+   ```
+   npm run dev
+   ```
 
 A link should popup specific to your local machine (i.e. `http://localhost:<PORT_NUMBER>`). Upon clicking, the Histora app should be live!
 
