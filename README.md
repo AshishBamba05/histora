@@ -166,9 +166,9 @@ I chose REST APIs for this project because:
 
 ### 3.) Using Node.js to set up runtime
 
-Node.js serves as the backend runtime; It runs the server/ code and enables the Express server to communicate with the React frontend through REST APIs, helping manage the request/response flow
+Node.js serves as the backend runtime; It runs the server/ code and enables the Express server to communicate with the React frontend through REST APIs, helping manage the request/response flow.
 
-and to connect to MongoDB via Mongoose.
+Moreover, it also connects the Express server to MongoDB via Mongoose.
 
 ### 4.) MongoDB over SQL
 
