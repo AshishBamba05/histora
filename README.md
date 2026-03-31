@@ -63,15 +63,15 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 ### Key Files
 
 [`src/`](https://github.com/AshishBamba05/histora/tree/main/src) : Frontend React App
-- [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx) — Main search interface and result rendering logic
-- [`src/App.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/App.jsx) — App shell and page layout
+- 👉 [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx) — Main search interface and result rendering logic
+- 👉 [`src/App.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/App.jsx) — App shell and page layout
 
 [`server/`](https://github.com/AshishBamba05/histora/tree/main/server) : Backend (Express server, MongoDB connection, Mongoose model, and seed/build scripts)
-- [`server/server.js`](https://github.com/AshishBamba05/histora/blob/main/server/server.js) — Express server, API routes, search handling, and suggestion logic
-- [`server/models/Event.js`](https://github.com/AshishBamba05/histora/blob/main/server/models/Event.js) — MongoDB schema and text indexes for historical events
-- [`server/db.js`](https://github.com/AshishBamba05/histora/blob/main/server/db.js) — Database connection setup
-- [`server/build-events.mjs`](https://github.com/AshishBamba05/histora/blob/main/server/build-events.mjs) — Builds normalized event data for seeding
-- [`server/seed.mjs`](https://github.com/AshishBamba05/histora/blob/main/server/seed.mjs) — Seeds event data into MongoDB
+- 👉 [`server/server.js`](https://github.com/AshishBamba05/histora/blob/main/server/server.js) — Express server, API routes, search handling, and suggestion logic
+- 👉 [`server/models/Event.js`](https://github.com/AshishBamba05/histora/blob/main/server/models/Event.js) — MongoDB schema and text indexes for historical events
+- 👉 [`server/db.js`](https://github.com/AshishBamba05/histora/blob/main/server/db.js) — Database connection setup
+- 👉 [`server/build-events.mjs`](https://github.com/AshishBamba05/histora/blob/main/server/build-events.mjs) — Builds normalized event data for seeding
+- 👉 [`server/seed.mjs`](https://github.com/AshishBamba05/histora/blob/main/server/seed.mjs) — Seeds event data into MongoDB
 
 
 ## 🧭 Scenario Walkthrough
@@ -134,28 +134,28 @@ On the React frontend component [`src/Histora.jsx`](https://github.com/AshishBam
 
 Here's a highlight of each state: 
 
-  -  `dateInput`:
+  -  👉 `dateInput`:
       Stores what the user typed into the date field. It needs state because the input is controlled by React.
    
-  -  `keywordInput`:
+  -  👉 `keywordInput`:
       Stores what the user typed into the keyword search box. Same reason: it is a controlled input and changes on every keystroke.
    
-  -  `narratives`:
+  -  👉 `narratives`:
       Holds the current search results being displayed after a search. This changes depending on whether the user searched by date, by keyword, or got no matches.
    
-  -  `hasSearched`:
+  -  👉 `hasSearched`:
       Distinguishes the initial page view from the post-search view. You needed this because before searching, the app shows all events, but after searching it should show either results or an empty-state message.
    
-  -  `suggestion`:
+  -  👉 `suggestion`:
       Stores the backend’s “Did you mean?” result when keyword search fails. This state lets the UI conditionally render the suggestion card.
    
-  -  `loading`:
+  -  👉 `loading`:
       Tracks whether a search request is still in progress. That allows the UI to show “Searching...” and avoid rendering the wrong state too early.
    
- -   `allEvents`:
+ -   👉 `allEvents`:
       Stores the full dataset loaded when the app boots from /api/events. I needed this because date filtering is done on the frontend using already-fetched events.
    
- -  `bootError`:
+ -   👉 `bootError`:
       Tracks whether the initial event preload failed. That gives you a way to show an error message if the app cannot fetch the event dataset on startup.
 
 ### 2.) Choosing REST APIs
