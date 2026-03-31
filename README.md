@@ -116,7 +116,9 @@ We default to the date filter, and this renders the same output as Case #2.
 
 ### 1.) Deciding React States
 
-On the frontend, we activate 8 states:
+A `state` is a variable that our program remembers over time and correspondingly keeps our UI updated.
+
+On the React frontend component [`src/Histora.jsx`](https://github.com/AshishBamba05/histora/blob/main/src/Histora.jsx), we activate 8 states:
 
 ```bash
   const [dateInput, setDateInput] = useState('');
@@ -129,6 +131,30 @@ On the frontend, we activate 8 states:
   const [allEvents, setAllEvents] = useState([]);
   const [bootError, setBootError] = useState(null);
 ```
+
+`dateInput`:
+Stores what the user typed into the date field. It needs state because the input is controlled by React.
+
+`keywordInput`:
+Stores what the user typed into the keyword search box. Same reason: it is a controlled input and changes on every keystroke.
+
+`narratives`:
+Holds the current search results being displayed after a search. This changes depending on whether the user searched by date, by keyword, or got no matches.
+
+`hasSearched`:
+Distinguishes the initial page view from the post-search view. You needed this because before searching, the app shows all events, but after searching it should show either results or an empty-state message.
+
+`suggestion`:
+Stores the backend’s “Did you mean?” result when keyword search fails. This state lets the UI conditionally render the suggestion card.
+
+`loading`:
+Tracks whether a search request is still in progress. That allows the UI to show “Searching...” and avoid rendering the wrong state too early.
+
+`allEvents`:
+Stores the full dataset loaded when the app boots from /api/events. I needed this because date filtering is done on the frontend using already-fetched events.
+
+`bootError`:
+Tracks whether the initial event preload failed. That gives you a way to show an error message if the app cannot fetch the event dataset on startup.
 
 ### 2.) Choosing REST APIs
 
