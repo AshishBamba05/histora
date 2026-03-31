@@ -180,7 +180,7 @@ As we're iterating through the list, our program keeps track of the match with t
 
 I chose to deploy Histora on Render because it matches the scale and architecture of this project very well.
 
-More specifically, Render supports full-stack apps (esp. those with Node/Express backends) cleanly, lets me configure env variables (e.g. MongoDB_URI), and outputs a publicly accessible link.
+More specifically, Render supports full-stack apps (esp. those with Node/Express backends) cleanly, lets me configure env variables (e.g. `MongoDB_URI`), and outputs a publicly accessible link.
 
 
 ## 🖥️ Black-Box Testing
