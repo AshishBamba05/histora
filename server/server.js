@@ -72,12 +72,6 @@ app.get("/api/events", async (req, res) => {
   res.json(events);
 });
 
-app.get("/api/events/:id", async (req, res) => {
-  const doc = await Event.findOne({ id: req.params.id }).lean();
-  if (!doc) return res.status(404).json({ error: "Not found" });
-  res.json(doc);
-});
-
 const bestSuggestion = (q) => {
   const needle = String(q || "").toLowerCase().trim();
   if (!needle) return null;
