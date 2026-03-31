@@ -160,9 +160,9 @@ Tracks whether the initial event preload failed. That gives you a way to show an
 
 I chose REST APIs for this project because:
 
-- 👉 It is stateless, meaning that each API request is independent of one another. This is suitable for my project, because I call a search API every time a user searches a keyword, and the app don't need to remember previous search requests to understand current one.
+  👉 It is stateless, meaning that each API request is independent of one another. This is suitable for my project, because I call a search API every time a user searches a keyword, and the app don't need to remember previous search requests to understand current one.
   
-👉 It is resource-driven as opposed to being action-driven, which fits because the app just call API endpoints when it needs to read data and deliver it to React frontend for display. This doesn't require a complex function, so REST API principles fit well here.
+  👉 It is resource-driven as opposed to being action-driven, which fits because the app just call API endpoints when it needs to read data and deliver it to React frontend for display. This doesn't require a complex function, so REST API principles fit well here.
 
 ### 3.) Using Node.js to set up runtime
 
