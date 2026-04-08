@@ -112,7 +112,7 @@ We default to the date filter, and this renders the same output as Case #2.
 ---
 
 
-## Software Engineering Design Decisions
+## 👨‍💻 Software Engineering Design Decisions
 
 ### 1.) Deciding React States
 
